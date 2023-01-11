@@ -1,13 +1,17 @@
-*body{
-    background: linear-gradient(-100deg,white 50%,deeppink 50%);
+
+
+body{
+    background: linear-gradient(-100deg,white 50%, aliceblue 50%);
+    background-color: ;
 }
-.footer{
-        background-color: #2e2d2c;
-        height: 50px;
-        color: aliceblue;
-        display: flex;
-        justify-content:space-around;
-        padding: 55px calc((100% - 960px)/2);
+#nos{
+    padding-top: 23%;
+    text-align: center;
+    align-items: center;
+}
+#nao{
+   margin-top: 1000px;
+   padding-top: 100px;
 }
 .center{
     width: 100%;
@@ -21,15 +25,7 @@
     display: flex;
     color: black;
 }
-.footer a{
-    margin-left: 3px;
-    color: white;
-    text-decoration: none;   
-}
-.footer__copyright, .footer_g{
-    padding-left: 10px;
-    padding-right: 10px;
-}
+
 
 #nu{
     display: flex;
@@ -56,7 +52,11 @@
         color: black;
         display: flex;
     }
-   
+    #nos{
+        padding-top: 50%;
+        padding-bottom: 50%;
+    }
+    
 }
 #bc{
     display: flex;
@@ -74,5 +74,300 @@
     text-decoration: none;
 }
 
+.form_cad input{
+display: block;
+height: 55px;
+width: 400px;
+margin: 10px;
+border-radius: 30px;
+border: 1.2px solid #fff;
+font-size: 16px;
+padding: 10px 20px;
+background-color: rgb(255,255,255, 0.01);
+color: #fff;
+outline: none;
+}
+.form_cad{
+    width: 450px;
+    margin: 150px auto 0px auto;
+}
+.form_cad h1{
+    text-align: center;
+    padding: 10px;
+}
+.form_cad input[type=submit]{
+    background-color: #FF0066;
+    border: none;
+    cursor: pointer
+}
+.form_cad a:hover{
+    text-decoration: underline;
+}
+.form_cad a{
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    display: block;
+}
+.wrapper{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    
+}
+.wrapper .card{
+    cursor: pointer;
+    background: #fff;
+    width: 450px;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    padding: 20px;
+    position: absolute;
+    justify-content: space-between;
+    border-radius: 100px 20px 20px 100px;
+    animation: animacao 15s linear infinite; /*tempo*/
+    animation-delay: calc(3s * var(--delay));
+    text-align: center;
+}
+
+/*parafem quando cursor*/
+.wrapper:hover .card{
+    animation-play-state: paused;
+     box-shadow: 0 20px 40px rgb(0,0,0, 0.8);
+}
+
+.wrapper .card:last-child{
+    animation-delay: calc(4s * var(--delay));
+}
+@keyframes animacao {
+    0%{
+        opacity: 0;
+        transform: translateY(100%) scale(0.5);
+    }
+    5%, 20%{
+        opacity: 0.4;
+        transform: translateY(100%) scale(0.7);
+    }
+    25%, 40%{
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0%) scale(1);
+    }
+    45%, 60%{
+        opacity: 0.4;
+        transform: translateY(100%) scale(0.7);
+    }
+    45%, 60%{
+        opacity: 0.4;
+        transform: translateY(-100%) scale(0.7);
+    }
+    65%, 100%{
+        opacity: 0;
+        transform: translateY(-100%) scale(0.5);
+    }
 
 
+}
+
+
+.wrapper .card .img{
+    display: flex;
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    left: -5px;
+    background: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+.card .img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+}
+.card a{
+    float: left;
+    text-decoration: none;
+    margin-left: 80%;
+    border-radius: 25px;
+    padding: 7px 18px;
+    color: #fff;
+    background: linear-gradient(to bottom, #bea2e7 0%, #86b7e7 100%);
+    
+}
+.contain{
+    height: 60vh;
+    width: 30vw;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    perspective: 1000px;
+}
+.box{
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: animate 5s infinite;
+}
+@keyframes animate{
+    0%{
+        transform: rotatex(45deg) rotateY(-45deg);
+    }
+    25%{
+        transform: rotatex(-45deg) rotateY(-45deg);
+    }
+    50%{
+        transform: rotatex(45deg) rotateY(45deg);
+    }
+    75%{
+        transform: rotatex(-45deg) rotateY(45deg);
+    }
+    100%{
+        transform: rotatex(45deg) rotateY(-45deg);
+    }
+}
+.cad{
+    height: 250px;
+    width: 250px;
+    text-align: center;
+    padding: 100px 0px;
+    color: white;
+    background: #2e2d2c;
+    border: 2px solid white;
+    font-size: 32px;
+    box-sizing: border-box;
+    position: absolute;
+}
+#front{
+    transform: translateZ(125px);
+}
+#back{
+    transform: translateZ(-125px);
+}
+#left{
+    right: 125px;
+    transform: rotateY(-90deg);
+}
+#right{
+    left: 125px;
+    transform: rotateY(90deg);
+}
+#top{
+    bottom: 125px;
+    transform: rotatex(90deg);
+}
+#bottom{
+    top: 125px;
+    transform: rotatex(-90deg);
+}
+.anima{
+    display: inline-block;
+    border-right: 2px solid #000;
+    padding-right:3px ;
+    max-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: pisca normal infinite .8s, escrever normal 5s steps(55) both;
+}
+@keyframes pisca{
+    100%{
+        border-right-color: transparent;
+    }
+}
+@keyframes escrever {
+    100%{
+        max-width: 100%;
+    }
+}
+:before,
+:after{
+    box-sizing: border-box;
+}
+.footer{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -sm-flex;
+    display: -o-flex;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 50px;
+    color: #fff;
+    background-color: #262626;
+}
+
+.footer > *{
+    flex: 1 100%;
+}
+.l-footer{
+    margin-right: 1.25rem;
+    margin-bottom: 2em;
+}
+.footer h2{
+    font-weight: 900;
+    font-size: 16px;
+}
+.footer ul{
+    list-style: none;
+    padding-left: 0;
+}
+.footer li{
+    line-height: 2em;
+}
+.footer a{
+    text-decoration: none;
+    color: #999;
+}
+.r-footer{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -sm-flex;
+    display: -o-flex;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.r-footer > *{
+    flex: 1 50%;
+    margin-right: 1.25em;
+}
+.box1 a{
+    text-decoration: none;
+}
+.h-box1{
+    column-count: 2;
+    column-gap: 1.25em;
+}
+.b-footer{
+    text-align: center;
+    color: #999;
+    padding-top: 50px;
+}
+.l-footer p{
+    padding-right: 20%;
+    color: #999;
+}
+@media screen and (min-width:600px) {
+    .r-footer > *{
+        flex: 1;
+    }
+    .features{
+        flex-grow: 2;
+    }
+    .l-footer{
+        flex: 1 0px;
+    }
+    .r-footer{
+        flex: 2 0px;
+    }
+    
+}
+
+#volt a{
+    text-decoration: none;
+}
