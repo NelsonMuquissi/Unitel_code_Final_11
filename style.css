@@ -2,7 +2,6 @@
 
 body{
     background: linear-gradient(-100deg,white 50%, aliceblue 50%);
-    background-color: ;
 }
 #nos{
     padding-top: 23%;
@@ -61,54 +60,23 @@ body{
 #bc{
     display: flex;
 }
+#add{
+    box-shadow: 0 20px 20px rgb(0,0,0, 0.8);
+}
 #add :hover{
     background-color: #2e2d2c;
     color: #fff;
     transform: translateY(0px);
     cursor: pointer;
     opacity: 1px;
-    box-shadow: 0 20px 40px rgb(0,0,0, 0.8);
+    box-shadow: 0 20px 20px rgb(0,0,0, 0.8);
 }
 
 #textonew a{
     text-decoration: none;
 }
 
-.form_cad input{
-display: block;
-height: 55px;
-width: 400px;
-margin: 10px;
-border-radius: 30px;
-border: 1.2px solid #fff;
-font-size: 16px;
-padding: 10px 20px;
-background-color: rgb(255,255,255, 0.01);
-color: #fff;
-outline: none;
-}
-.form_cad{
-    width: 450px;
-    margin: 150px auto 0px auto;
-}
-.form_cad h1{
-    text-align: center;
-    padding: 10px;
-}
-.form_cad input[type=submit]{
-    background-color: #FF0066;
-    border: none;
-    cursor: pointer
-}
-.form_cad a:hover{
-    text-decoration: underline;
-}
-.form_cad a{
-    text-decoration: none;
-    color: #fff;
-    text-align: center;
-    display: block;
-}
+
 .wrapper{
     
     display: flex;
@@ -141,7 +109,7 @@ outline: none;
 }
 
 .wrapper .card:last-child{
-    animation-delay: calc(4s * var(--delay));
+    animation-delay: calc(3s * var(--delay));
 }
 @keyframes animacao {
     0%{
@@ -159,18 +127,12 @@ outline: none;
     }
     45%, 60%{
         opacity: 0.4;
-        transform: translateY(100%) scale(0.7);
-    }
-    45%, 60%{
-        opacity: 0.4;
         transform: translateY(-100%) scale(0.7);
     }
     65%, 100%{
         opacity: 0;
         transform: translateY(-100%) scale(0.5);
     }
-
-
 }
 
 
